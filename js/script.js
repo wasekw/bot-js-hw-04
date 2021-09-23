@@ -408,3 +408,320 @@
 // });
 // // выводит [ 10, 6, 3, 4, 1 ]
 // console.log(lenArray);
+
+// Используем метод массива map на массиве объектов
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map((book) => book.title);
+
+// Используем метод массива flatMap на массиве объектов
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+
+// const genres = books.flatMap((book) => book.genres);
+
+// const getUserNames = (users) => users.map((user) => user.name);
+// let a = 2;
+// console.log(~a);
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    skills: ["ipsum", "lorem"],
+    gender: "male",
+    age: 37,
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+    gender: "female",
+    age: 34,
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+    gender: "male",
+    age: 24,
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    skills: ["adipisicing", "irure", "velit"],
+    gender: "female",
+    age: 21,
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    skills: ["ex", "culpa", "nostrud"],
+    gender: "male",
+    age: 27,
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    skills: ["non", "amet", "ipsum"],
+    gender: "male",
+    age: 38,
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    skills: ["lorem", "veniam", "culpa"],
+    gender: "female",
+    age: 39,
+  },
+];
+// const getUserEmails = (users) => users.map((user) => user.email);
+
+// Перебор массива методом filter
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+// const evenNumbers = numbers.filter((number) => number % 2 === 0);
+// const oddNumbers = numbers.filter((number) => number % 2 !== 0);
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+
+// Выбор уникального элемента с помощью методов flatMap, filter
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// const allGenres = books.flatMap((book) => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index, array) => array.indexOf(genre) === index
+// );
+// console.log(uniqueGenres);
+
+// Выборка по условию с массива объектов с помощью метода filter
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+
+// const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+
+// const getUsersWithEyeColor = (users, color) => {
+//   return users.filter((user) => user.eyeColor === color);
+// };
+// getUsersWithEyeColor = (users, blue);
+// console.log(getUsersWithEyeColor);
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   return users.filter((user) => user.age >= minAge && user.age <= maxAge);
+// };
+
+// console.log(getUsersWithAge(users, 30, 40));
+
+// const getUsersWithFriend = (users, friendName) => {
+//   return users.filter((user) => user.friends.includes(friendName));
+// };
+
+// console.log(getUsersWithFriend(users, "Goldie Gentry"));
+
+// const getFriends = (users) => {
+//   const checkFriends = users.flatMap((user) => user.friends);
+//   return checkFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+// };
+// console.log(getFriends(users));
+
+// const getActiveUsers = (users) => {
+//   return users.filter((user) => user.isActive);
+// };
+
+// const getInactiveUsers = (users) => users.filter((user) => !user.isActive);
+
+// Метод поиска уникального элемента в массиве объектов с помощью метода find  с деструктуризацией объектова
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+
+// const bookWithTitle = books.find(({ title }) => title === BOOK_TITLE);
+// const bookByAuthor = books.find(({ author }) => author === AUTHOR);
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find((user) => user.email === email);
+// };
+
+// Метод проверки массива every
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const eachElementInFirstIsEven = firstArray.every((number) => number % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every((number) => number % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(
+//   (number) => number % 2 === 0
+// );
+// const eachElementInSecondIsOdd = secondArray.every((number) => number !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every((number) => number % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every((number) => number % 2 !== 0);
+
+// const isEveryUserActive = (users) => {
+//   return users.every((user) => user.isActive);
+// };
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const anyElementInFirstIsEven = firstArray.some((number) => number % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some((number) => number % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some((number) => number % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some((number) => number % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some((number) => number % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some((number) => number % 2 !== 0);
+
+// const isAnyUserActive = (users) => {
+//   return users.some((user) => user.isActive);
+// };
+
+// Используем для перебора метод reduce
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+// const totalPlayTime = playtimes.reduce((acc, number) => {
+//   return acc + number;
+// }, 0);
+
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// Task #2
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce(
+//   (acc, { playtime, gamesPlayed }) => {
+//     return acc + playtime / gamesPlayed;
+//   },
+//   0
+// );
+
+// Task #3
+
+// const calculateTotalBalance = (users) =>
+//   users.reduce((acc, { balance }) => {
+//     return acc + balance;
+//   }, 0);
+
+// Task #4
+
+// const getTotalFriendCount = (users) =>
+//   users.reduce((acc, { friends }) => {
+//     return acc + friends.length;
+//   }, 0);
