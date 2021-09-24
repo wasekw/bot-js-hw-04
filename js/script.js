@@ -725,3 +725,156 @@ const users = [
 //   users.reduce((acc, { friends }) => {
 //     return acc + friends.length;
 //   }, 0);
+
+// Метод сортировки массива sort
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+// console.table(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// Task # 2 sort
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// Сравнение строк методом sort  с методом localeCompare
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// Работа в массиве объектов с использованием методов sort and localeCompare
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+//   firstBook.author.localeCompare(secondBook.author)
+// );
+
+// const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
+//   secondBook.author.localeCompare(firstBook.author)
+// );
+
+// const sortedByAscendingRating = [...books].sort(
+//   (firstRating, secondRating) => firstRating.rating - secondRating.rating
+// );
+
+// const sortedByDescentingRating = [...books].sort(
+//   (firstRating, secondRating) => secondRating.rating - firstRating.rating
+// );
+
+// Task # 2
+
+// const sortByAscendingBalance = (users) => {
+//   return users.sort((a, b) => a.balance - b.balance);
+// };
+
+// Task # 3
+// const sortByDescendingFriendCount = (users) => {
+//   return [...users].sort((a, b) => b.friends.length - a.friends.length);
+// };
+// const sortByName = (users) => {
+//   return [...users].sort((firstName, secondName) =>
+//     firstName.name.localeCompare(secondName.name)
+//   );
+// };
+// console.log(sortByName(users));
+
+// Цепочка методов массив имён авторов в алфавитном порядке
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+
+// const names = books
+//   .filter((book) => book.rating > MIN_BOOK_RATING)
+//   .map((book) => book.author)
+//   .sort((a, b) => a.localeCompare(b));
+
+// console.log(names);
+
+// Task # 2
+
+// const getNamesSortedByFriendCount = (users) => {
+//   return [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map((user) => user.name);
+// };
+
+// Task # 3
+
+// const getSortedFriends = (users) => {
+//   return users
+//     .flatMap((user) => user.friends)
+//     .filter((friendName, index, array) => array.indexOf(friendName) === index)
+//     .sort((a, b) => a.localeCompare(b));
+// };
+
+// Task # 4
+
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users
+//     .filter((user) => user.gender === gender)
+//     .reduce((acc, user) => {
+//       return user.balance + acc;
+//     }, 0);
+// };
